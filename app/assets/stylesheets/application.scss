@@ -1,0 +1,20 @@
+@import 'bootstrap';
+
+
+ 
+header {
+  background-color: #e0ef94;
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  width: 100px;
+  margin-left: 20px;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
