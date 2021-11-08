@@ -1,15 +1,15 @@
-import React, { Component } from "react"
-
+import React, { Component } from "react";
+import casitas from "../assets/casitas.png";
 
 class Home extends Component {
   render() {
-    return(
-        <>
-      <h3>This is Home!!</h3>
-      <h5>App Search Tool Here.</h5>
-             </>
-    )
+    return (
+      <>
+        <img src={casitas} 
+        alt="series of houses" 
+        className="casitas" />
+      </>
+    );
   }
 }
-
-export default Home 
+export default Home;
