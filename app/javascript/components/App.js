@@ -1,30 +1,33 @@
 import React, { Component } from 'react'
-import { Router } from 'react-router'
-import { BrowserRouter } as Router, Route, Routes from "react-router-dom"
-class App extends React.Component {
+import ApartmentIndex from './pages/AppartmentIndex'
+import Home from './pages/Home'
+import Footer from './components/Footer'
+import ApartmentShow from './pages/AppartmentShow'
+import Header from './components/Header'
+
+import {
+  BrowserRouter as Router, 
+  Routes,
+  Route
+}from 'react-router-dom'
+
+class App extends Component {
   render() {
-    const {
-      logged_in,
-      current_user,
-      new_user_route,
-      sign_in_route,
-      sign_out_route
-    } = this.props
-    return (
-      <React.Fragment>
-        { logged_in &&
-          <div>
-            <a href={sign_out_route }>Sign Out</a>
-          </div>
-        }
-        { !logged_in &&
-          <div>
-            <a href={ sign_in_route }>Sign In</a>
-          </div>
-        }
-      </React.Fragment>
+
+    return (    
+  <>
+  <h1>Hello World</h1>
+  <Router>
+    <Header {...this.props}/>
+    <Routes>
+    <Route exact path="/" element={ <Home /> } />
+    <Route path="/index" element={ <ApartmentIndex /> } />
+    <Route path="/show" element={ <ApartmentShow /> } />
+    </Routes>
+    <Footer />
+  </Router>
+  </>
     )
   }
 }
-
 export default App
